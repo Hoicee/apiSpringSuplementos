@@ -9,43 +9,43 @@ public class Suplementos {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int CODIGO;
+    private int codigo;
     @Column
-    private String NOME;
+    private String nome;
     @Column
-    private String MARCA;
+    private String marca;
     @Column
-    private int PESO;
+    private int peso;
 
     public int getCODIGO() {
-        return CODIGO;
+        return codigo;
     }
 
     public void setCODIGO(int CODIGO) {
-        this.CODIGO = CODIGO;
+        this.codigo = CODIGO;
     }
 
     public String getNOME() {
-        return NOME;
+        return nome;
     }
 
     public void setNOME(String NOME) {
-        this.NOME = NOME;
+        this.nome = NOME;
     }
 
     public String getMARCA() {
-        return MARCA;
+        return marca;
     }
 
     public void setMARCA(String MARCA) {
-        this.MARCA = MARCA;
+        this.marca = MARCA;
     }
 
     public int getPESO() {
-        return PESO;
+        return peso;
     }
 
     public void setPESO(int PESO) {
-        this.PESO = PESO;
+        this.peso = PESO;
     }
 }
