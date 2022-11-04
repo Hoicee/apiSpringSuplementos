@@ -14,8 +14,11 @@ public interface SupRepository extends JpaRepository <Suplementos, Integer> {
     @Query("select s from Suplementos s where s.codigo > ?1")
     public List<Suplementos> findByCodMaior(int codigo);
 
-    @Query("select s from suplementos s where s.nome like '%?1%'")
+    @Query("select s from Suplementos s where s.nome like '%?1%'")
     public List<Suplementos> findByNomeFiltro(String nome);
+
+    @Query("select s.nome from Suplementos s where s.codigo > ?1 and s.nome like '%?2%'")
+    public List<String> FindByNomeCod (int codigo, String nome);
 
 
 }

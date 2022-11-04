@@ -34,4 +34,11 @@ public class SupController {
 
     @GetMapping("/listarSupPesquisa/{nome}")
     public List<Suplementos> listarPorPesquisa (@PathVariable("nome") String nome) { return supRepository.findByNomeFiltro(nome);}
+
+    @GetMapping("/listaNomeCod/{codigo}/{nome}")
+    public List<String> listarNomeCod (@PathVariable("codigo") int codigo,
+                                       @PathVariable("nome") String nome)
+    {
+        return supRepository.FindByNomeCod(codigo, nome);
+    }
 }
